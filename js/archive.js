@@ -9,9 +9,9 @@ async function loadPublicRecords(){
   const box=document.getElementById('public-records');
   if(!box)return;
   try{
-    const manifest=await fetch('./records/manifest.json').then(r=>r.json());
+    const manifest=await fetch('./records/manifest.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json());
     const records=await Promise.all((manifest.records||[]).map(id=>
-      fetch('./records/'+encodeURIComponent(id)+'.json').then(r=>r.ok?r.json():null).catch(()=>null)
+      fetch('./records/'+encodeURIComponent(id)+'.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
     ));
     const publicRecords=records.filter(r=>r && String(r.status||'PUBLIC').toUpperCase()==='PUBLIC');
     if(!publicRecords.length){
@@ -40,7 +40,7 @@ async function lookup(){
   }
 
   try{
-    const response=await fetch('./records/'+encodeURIComponent(q)+'.json');
+    const response=await fetch('./records/'+encodeURIComponent(q)+'.json?ts='+Date.now(),{cache:'no-store'});
     if(!response.ok)throw new Error('not found');
     const r=await response.json();
 
@@ -64,7 +64,7 @@ async function showRecord(){
   }
 
   try{
-    const response=await fetch('./records/'+encodeURIComponent(id)+'.json');
+    const response=await fetch('./records/'+encodeURIComponent(id)+'.json?ts='+Date.now(),{cache:'no-store'});
     if(!response.ok)throw new Error('not found');
     const r=await response.json();
     renderRecord(box,r,false);
