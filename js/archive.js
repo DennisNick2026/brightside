@@ -143,9 +143,13 @@ function renderRecord(box,r,unlocked){
     ? '<div class="access-box"><h2>ARCHIVE COPY INCOMPLETE</h2><p>The indexed copy is damaged or incomplete. The material below may not represent the complete original record.</p></div>'
     : '';
 
-  const related=(r.related||[]).map(x=>
-    '<li><a href="./record.html?id='+encodeURIComponent(x.id)+'">'+
-    escapeHtml(x.label||x.id)+'</a></li>').join('');
+  const related=(r.related||[]).map(x=>{
+    const id=typeof x==='string'?x:x?.id;
+    const label=typeof x==='string'?x:(x?.label||x?.id);
+    if(!id)return '';
+    return '<li><a href="./record.html?id='+encodeURIComponent(id)+'">'+
+      escapeHtml(label)+'</a></li>';
+  }).join('');
 
   box.innerHTML='<section class="paper">'+
     '<span class="status">'+escapeHtml(r.status)+'</span>'+
