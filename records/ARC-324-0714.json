@@ -1,0 +1,17 @@
+{
+  "id": "ARC-324-0714",
+  "title": "Industrial Survey / Northstar Components Plant 2",
+  "category": "ARCHIVE",
+  "date": "324.07.14",
+  "status": "PUBLIC",
+  "source": "MUNICIPAL INDUSTRIAL SURVEY OFFICE",
+  "summary": "Photographic attachment from a routine industrial site survey.",
+  "body": "Routine exterior survey of Northstar Components Plant 2.\n\nNo structural abnormalities were noted.\n\nOne photographic attachment was included with the original report.\n\nIMAGE REF: ARC-324-0714-01",
+  "images": [
+    {
+      "src": "images/ARC-324-0714-01.svg",
+      "label": "PHOTOGRAPHIC ATTACHMENT",
+      "caption": "Northstar Components Plant 2, exterior view."
+    }
+  ]
+}
