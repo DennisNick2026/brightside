@@ -3,8 +3,9 @@
   "title": "Correspondence / External Archive Request",
   "category": "CORRESPONDENCE",
   "date": "323.07.20",
-  "status": "PUBLIC",
+  "status": "RESTRICTED",
   "source": "UNSPECIFIED",
   "summary": "Request concerning preservation and indexing of records held outside the primary database.",
-  "body": "The correspondence requests that a secondary copy be retained in the event that the primary database becomes unavailable.\n\nThe identity of the requesting party is not preserved in this copy."
+  "body": "The correspondence requests that a secondary copy be retained in the event that the primary database becomes unavailable.\n\nThe identity of the requesting party is not preserved in this copy.\n\n[END OF PUBLICLY INDEXED COPY]",
+  "key": "PLANCK"
 }
