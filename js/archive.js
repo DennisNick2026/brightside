@@ -14,22 +14,36 @@ async function loadPublicRecords(){
       fetch('./records/'+encodeURIComponent(id)+'.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
     ));
     const publicRecords=records.filter(r=>r && String(r.status||'PUBLIC').toUpperCase()==='PUBLIC');
-    if(!publicRecords.length){
-      box.innerHTML='<div class="paper"><p>NO PUBLIC RECORDS ARE CURRENTLY INDEXED.</p></div>';
+    const publicIds=new Set(publicRecords.map(r=>r.id));
+
+    // Only show public records that act as an entry point to a larger public collection.
+    // A record is an entry point when it links to at least one other public record.
+    const collectionEntries=publicRecords.filter(r=>
+      Array.isArray(r.related) &&
+      r.related.some(x=>publicIds.has(typeof x==='string'?x:x?.id))
+    );
+
+    if(!collectionEntries.length){
+      box.innerHTML='<div class="paper"><p>NO PUBLIC COLLECTIONS ARE CURRENTLY INDEXED.</p></div>';
       return;
     }
-    box.innerHTML=publicRecords.map(r=>
-      '<a class="result" href="./record.html?id='+encodeURIComponent(r.id)+'">'+
-      '<span class="status">'+escapeHtml(String(r.status||'PUBLIC').toUpperCase())+'</span>'+
-      '<h3>'+escapeHtml(r.title)+'</h3>'+
-      '<div class="meta">'+escapeHtml(r.id)+' / '+escapeHtml(r.date)+' / '+escapeHtml(r.category)+'</div>'+
-      '<p class="summary">'+escapeHtml(r.summary)+'</p></a>'
-    ).join('');
+
+    box.innerHTML=collectionEntries.map(r=>{
+      const publicRelated=(r.related||[])
+        .map(x=>typeof x==='string'?x:x?.id)
+        .filter(id=>publicIds.has(id)).length;
+      return '<a class="result collection-result" href="./record.html?id='+encodeURIComponent(r.id)+'">'+
+        '<span class="status">PUBLIC</span>'+
+        '<h3>'+escapeHtml(r.title)+'</h3>'+
+        '<div class="meta">'+escapeHtml(r.id)+' / '+escapeHtml(r.date)+' / '+escapeHtml(r.category)+'</div>'+
+        '<p class="summary">'+escapeHtml(r.summary)+'</p>'+
+        '<div class="collection-count">'+publicRelated+' related public record'+(publicRelated===1?'':'s')+'</div>'+
+      '</a>';
+    }).join('');
   }catch(e){
     box.innerHTML='<div class="paper error"><p>PUBLIC INDEX UNAVAILABLE.</p></div>';
   }
 }
-
 async function lookup(){
   const q=(input()?.value||'').trim();
   const box=results();
