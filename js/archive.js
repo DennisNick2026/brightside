@@ -20,7 +20,7 @@ async function lookup(){
     const r=await response.json();
 
     box.innerHTML='<a class="result" href="./record.html?id='+encodeURIComponent(r.id)+'">'+
-      '<span class="status">'+escapeHtml(r.status)+'</span>'+
+      '<span class="status">'+escapeHtml(status)+'</span>'+
       '<h3>'+escapeHtml(r.title)+'</h3>'+
       '<div class="meta">'+escapeHtml(r.id)+' / '+escapeHtml(r.date)+' / '+escapeHtml(r.category)+'</div>'+
       '<p class="summary">'+escapeHtml(r.summary)+'</p></a>';
@@ -49,6 +49,24 @@ async function showRecord(){
 }
 
 function renderRecord(box,r,unlocked){
+  const status=String(r.status||'PUBLIC').toUpperCase();
+
+  if(status==='WITHDRAWN'){
+    box.innerHTML='<section class="paper withdrawn">'+
+      '<span class="status">WITHDRAWN</span>'+
+      '<div class="eyebrow">'+escapeHtml(r.category)+'</div>'+
+      '<h1>'+escapeHtml(r.title)+'</h1>'+ 
+      '<div class="record-meta">'+
+        '<div>REFERENCE</div><div>'+escapeHtml(r.id)+'</div>'+ 
+        '<div>DATE</div><div>'+escapeHtml(r.date)+'</div>'+ 
+        '<div>SOURCE</div><div>'+escapeHtml(r.source)+'</div>'+ 
+        '<div>CLASSIFICATION</div><div>WITHDRAWN</div>'+ 
+      '</div>'+ 
+      '<div class="access-box"><h2>RECORD WITHDRAWN</h2><p>This record has been withdrawn from public access.</p></div>'+ 
+      '</section>';
+    return;
+  }
+
   if(r.key && !unlocked){
     box.innerHTML='<section class="paper restricted">'+
       '<span class="status">'+escapeHtml(r.status)+'</span>'+
@@ -82,6 +100,10 @@ function renderRecord(box,r,unlocked){
     return;
   }
 
+  const corruptionNotice=status==='CORRUPTED'
+    ? '<div class="access-box"><h2>ARCHIVE COPY INCOMPLETE</h2><p>The indexed copy is damaged or incomplete. The material below may not represent the complete original record.</p></div>'
+    : '';
+
   const related=(r.related||[]).map(x=>
     '<li><a href="./record.html?id='+encodeURIComponent(x.id)+'">'+
     escapeHtml(x.label||x.id)+'</a></li>').join('');
@@ -96,6 +118,7 @@ function renderRecord(box,r,unlocked){
       '<div>SOURCE</div><div>'+escapeHtml(r.source)+'</div>'+
       '<div>CLASSIFICATION</div><div>'+escapeHtml(r.status)+'</div>'+
     '</div>'+
+    corruptionNotice+
     '<div class="record-body">'+escapeHtml(r.body).replace(/\n/g,'<br>')+'</div>'+
     (related?'<div class="related"><h2>RELATED RECORDS</h2><ul>'+related+'</ul></div>':'')+
     '</section>';
