@@ -1,0 +1,10 @@
+{
+  "id": "ARC-324-0601",
+  "title": "Transit Authority / Receiving Clerk Statement",
+  "category": "TRANSIT",
+  "date": "324.06.01",
+  "status": "PUBLIC",
+  "source": "TRANSIT AUTHORITY",
+  "summary": "Statement concerning archival cargo received without a corresponding dispatch record.",
+  "body": "Receiving clerk statement, depot 4:\n\n\"Box arrived sealed. No damage. Label said R-17-09. I checked the movement board and there was nothing there.\n\nWe checked again after unloading it. Still nothing.\n\nThere was a paper manifest inside the box, but the system copy wasn't there.\"\n\nStatement ends."
+}
