@@ -1,0 +1,15 @@
+{
+  "id": "ARC-326-0215",
+  "title": "Archive Reconciliation / Attachment Exception",
+  "category": "ARCHIVE",
+  "date": "326.02.15",
+  "status": "CORRUPTED",
+  "source": "ARCHIVAL SERVICES",
+  "summary": "Partial reconciliation note for a municipal facility record.",
+  "body": "SOURCE RECORD: ARC-326-0211\\nATTACHMENT COUNT: 1\\nATTACHMENT STATUS: PRESENT\\n\\n[DATA LOSS]\\n\\nRecovered header indicates facility closure predates survey date by 7 years.\\n\\n[DATA LOSS]\\n\\nOperator note: do not correct the date manually.\\n\\n[END OF RECOVERED COPY]",
+  "related": [
+    "ARC-326-0211",
+    "ARC-326-0214",
+    "ARC-326-0219"
+  ]
+}
