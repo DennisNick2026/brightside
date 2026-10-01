@@ -1,0 +1,25 @@
+{
+  "id": "ARC-326-0211",
+  "title": "Facilities Survey / East River Pump Station 6",
+  "category": "FACILITIES",
+  "date": "326.02.11",
+  "status": "PUBLIC",
+  "index": true,
+  "source": "MUNICIPAL INFRASTRUCTURE SURVEY OFFICE",
+  "summary": "Routine photographic survey of a municipal pumping facility.",
+  "body": "Exterior survey completed at 22:14 local time.\\n\\nNo active work order was attached to the survey request.\\n\\nOne photographic attachment was retained with the archive copy.\\n\\nIMAGE REF: ARC-326-0211-01",
+  "images": [
+    {
+      "src": "images/ARC-326-0211-01.svg",
+      "label": "FIELD PHOTOGRAPH",
+      "caption": "North intake, East River Pump Station 6."
+    }
+  ],
+  "related": [
+    "ARC-326-0212",
+    "ARC-326-0214",
+    "ARC-326-0215",
+    "ARC-326-0219",
+    "ARC-326-0226"
+  ]
+}
