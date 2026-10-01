@@ -145,10 +145,11 @@ function renderRecord(box,r,unlocked){
 
   const related=(r.related||[]).map(x=>{
     const id=typeof x==='string'?x:x?.id;
-    const label=typeof x==='string'?x:(x?.label||x?.id);
     if(!id)return '';
-    return '<li><a href="./record.html?id='+encodeURIComponent(id)+'">'+
-      escapeHtml(label)+'</a></li>';
+    return '<li><a class="related-link" href="./record.html?id='+encodeURIComponent(id)+'">'+
+      '<strong>'+escapeHtml(x?.title||id)+'</strong>'+
+      '<span class="related-meta">'+escapeHtml(x?.category||'RECORD')+' / '+escapeHtml(id)+'</span>'+
+    '</a></li>';
   }).join('');
 
   box.innerHTML='<section class="paper">'+
