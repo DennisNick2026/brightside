@@ -1,1 +1,37 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Record | Brightside</title><link rel="stylesheet" href="css/brightside.css"></head><body><header class="masthead"><div><div class="eyebrow">BRIGHTSIDE // ARCHIVAL NETWORK</div><h1>RECORD VIEWER</h1></div><a href="archive.html">ARCHIVE</a></header><main class="page"><div id="record"></div></main><script src="https://cdn.jsdelivr.net/npm/exifr/dist/lite.umd.js"></script><script src="js/archive.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Record | Brightside</title>
+<link rel="stylesheet" href="css/brightside.css">
+</head>
+<body>
+<header class="masthead">
+  <div><div class="eyebrow">BRIGHTSIDE // ARCHIVAL NETWORK</div><h1>RECORD VIEWER</h1></div>
+  <a href="archive.html">ARCHIVE</a>
+</header>
+<main class="page">
+  <section class="controls persistent-tools">
+    <label for="record-search">RECORD REFERENCE</label>
+    <div class="lookup-row">
+      <input id="record-search" type="search" aria-label="Record reference" autocomplete="off" placeholder="ARC-326-0001">
+      <button id="record-lookup" type="button">RETRIEVE</button>
+    </div>
+    <p class="hint">Record lookup remains available while viewing archival material.</p>
+    <div id="record-lookup-result"></div>
+  </section>
+  <div id="record"></div>
+</main>
+<aside class="notepad" id="notepad">
+  <div class="notepad-head">
+    <strong>SITE NOTEPAD</strong>
+    <button id="notepad-toggle" type="button" aria-expanded="true">HIDE</button>
+  </div>
+  <textarea id="notepad-text" aria-label="Site notepad" placeholder="Enter notes..."></textarea>
+  <div class="notepad-foot"><span>LOCAL TO THIS BROWSER</span><button id="notepad-clear" type="button">CLEAR</button></div>
+</aside>
+<script src="https://cdn.jsdelivr.net/npm/exifr/dist/lite.umd.js"></script>
+<script src="js/archive.js"></script>
+</body>
+</html>
