@@ -1,0 +1,14 @@
+{
+  "id": "ARC-326-0001",
+  "title": "Archive Orientation / New User Guide",
+  "category": "ARCHIVE",
+  "date": "326.01.03",
+  "status": "PUBLIC",
+  "index": true,
+  "source": "BRIGHTSIDE ARCHIVAL NETWORK",
+  "summary": "Basic instructions for retrieving records and navigating connected archive material.",
+  "body": "WELCOME TO THE BRIGHTSIDE ARCHIVAL NETWORK.\n\nThis terminal retrieves records by reference number. The archive index is intentionally incomplete. Not every record held by the network is displayed here.\n\nHOW TO RETRIEVE A RECORD\nEnter a complete record reference in the RECORD REFERENCE field and select RETRIEVE.\n\nExample: ARC-326-0002\n\nThe example above opens a short navigation exercise. Follow the links within it before returning here if you are unfamiliar with connected records.\n\nRECORD CLASSIFICATIONS\nPUBLIC records can be opened normally.\nRESTRICTED records require an archive access key.\nWITHDRAWN records remain in the archive index but are not available for normal access.\nCORRUPTED records may contain incomplete or damaged copies.\nUNVERIFIED records have not been independently confirmed by the archive.\n\nNAVIGATION\nRecords may cite other records under RELATED RECORDS. Selecting one of these links opens the cited record and records where you came from. A RETURN TO PREVIOUS RECORD section will appear at the top of the next record.\n\nRecord references may also be entered directly when known.\n\nDo not assume that the absence of a record from this page means that no such record exists.",
+  "related": [
+    "ARC-326-0002"
+  ]
+}
