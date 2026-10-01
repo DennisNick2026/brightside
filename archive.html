@@ -1,1 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archive | Brightside</title><link rel="stylesheet" href="css/brightside.css"></head><body><header class="masthead"><div><div class="eyebrow">BRIGHTSIDE ARCHIVAL SERVICES</div><h1>PUBLIC RECORD INDEX</h1></div><a href="index.html">HOME</a></header><main class="page"><section class="notice"><strong>ARCHIVE STATUS:</strong> ONLINE<br><span>Records shown below are indexed copies. Availability and classification may vary.</span></section><section class="controls"><input id="search" type="search" placeholder="Search records..." aria-label="Search records"><div id="filters" class="filters"></div></section><section><div class="section-head"><span>INDEXED RECORDS</span><span id="count"></span></div><div id="results" class="results"></div></section></main><script src="js/archive.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archive | Brightside</title>
+<link rel="stylesheet" href="css/brightside.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <div class="eyebrow">BRIGHTSIDE ARCHIVAL SERVICES</div>
+    <h1>RECORD LOOKUP</h1>
+  </div>
+  <a href="index.html">HOME</a>
+</header>
+<main class="page">
+  <section class="notice">
+    <strong>ARCHIVE STATUS:</strong> ONLINE<br>
+    <span>Enter a record reference to access an indexed copy.</span>
+  </section>
+  <section class="controls lookup">
+    <label for="search">RECORD REFERENCE</label>
+    <div class="lookup-row">
+      <input id="search" type="search" placeholder="e.g. VRA-325-1002" aria-label="Record reference" autocomplete="off">
+      <button id="lookup" type="button">LOOK UP</button>
+    </div>
+    <p class="hint">Partial references may return a limited result. Classification does not guarantee availability.</p>
+  </section>
+  <section>
+    <div class="section-head"><span>ARCHIVE NOTICE</span></div>
+    <div class="paper">
+      <p>This terminal does not provide a complete public index.</p>
+      <p>Records are retrieved by reference number. Related records may be cited within individual documents.</p>
+    </div>
+  </section>
+  <section id="results" class="results"></section>
+</main>
+<script src="js/archive.js"></script>
+</body>
+</html>
