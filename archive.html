@@ -19,7 +19,7 @@
   <section class="controls lookup">
     <label for="search">RECORD REFERENCE</label>
     <div class="lookup-row">
-      <input id="search" type="search" aria-label="Record reference" autocomplete="off">
+      <input id="search" type="search" aria-label="Record reference" autocomplete="off" placeholder="ARC-326-0001">
       <button id="lookup" type="button">RETRIEVE</button>
     </div>
     <p class="hint">Use the complete record reference. Classification may limit access.</p>
@@ -30,6 +30,20 @@
       <p>This terminal does not provide a complete record index.</p>
       <p>Records are retrieved by reference number. Related records may be cited within individual documents.</p>
       <p class="muted">Do not distribute record references outside authorised channels.</p>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><span>FILTER INDEX</span></div>
+    <div class="controls filter-controls">
+      <label for="archive-filter">SEARCH INDEXED RECORDS</label>
+      <input id="archive-filter" type="search" aria-label="Search indexed records" autocomplete="off" placeholder="Title, reference, category, or keyword">
+      <div class="filter-row">
+        <label for="category-filter">CATEGORY</label>
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="">ALL CATEGORIES</option>
+        </select>
+      </div>
+      <p class="hint">Filters apply only to records shown in the indexed entry points below.</p>
     </div>
   </section>
   <section>
