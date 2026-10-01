@@ -1,0 +1,10 @@
+{
+  "id": "ARC-324-0321",
+  "title": "Regional Registry / Node Verification Request",
+  "category": "REGISTRY",
+  "date": "324.03.21",
+  "status": "PUBLIC",
+  "source": "REGIONAL REGISTRY",
+  "summary": "Request to verify two archive nodes referenced by records recovered during synchronisation.",
+  "body": "Please verify the following node identifiers against the current regional registry:\n\nNODE: R-17-04\nNODE: R-17-09\n\nNeither identifier returned a current match.\n\nHistorical registry search returned no results.\n\nPlease confirm whether these identifiers are obsolete, provisional, or incorrectly entered.\n\nREQUEST STATUS: OPEN"
+}
