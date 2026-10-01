@@ -8,34 +8,32 @@
 </head>
 <body>
 <header class="masthead">
-  <div>
-    <div class="eyebrow">BRIGHTSIDE ARCHIVAL SERVICES</div>
-    <h1>ARCHIVE</h1>
-  </div>
-  <a href="index.html">HOME</a>
+  <div><div class="eyebrow">BRIGHTSIDE // ARCHIVAL NETWORK</div><h1>RECORD ARCHIVE</h1></div>
+  <a href="index.html">NODE 04</a>
 </header>
 <main class="page">
   <section class="notice">
-    <strong>ARCHIVE STATUS:</strong> ONLINE<br>
-    <span>Enter a record reference to access an indexed copy.</span>
+    <strong>NODE STATUS:</strong> ONLINE<br>
+    <span>Enter a record reference to retrieve an indexed copy.</span>
   </section>
   <section class="controls lookup">
     <label for="search">RECORD REFERENCE</label>
     <div class="lookup-row">
-      <input id="search" type="search" placeholder="" aria-label="Record reference" autocomplete="off">
-      <button id="lookup" type="button">LOOK UP</button>
+      <input id="search" type="search" aria-label="Record reference" autocomplete="off">
+      <button id="lookup" type="button">RETRIEVE</button>
     </div>
-    <p class="hint">Use the complete record reference. Classification does not guarantee availability.</p>
+    <p class="hint">Use the complete record reference. Classification may limit access.</p>
   </section>
   <section>
     <div class="section-head"><span>ARCHIVE NOTICE</span></div>
     <div class="paper">
-      <p>This terminal does not provide a complete public index.</p>
+      <p>This terminal does not provide a complete record index.</p>
       <p>Records are retrieved by reference number. Related records may be cited within individual documents.</p>
+      <p class="muted">Do not distribute record references outside authorised channels.</p>
     </div>
   </section>
   <section>
-    <div class="section-head"><span>PUBLIC RECORDS</span></div>
+    <div class="section-head"><span>INDEXED ENTRY POINTS</span></div>
     <div id="public-records" class="results"></div>
   </section>
   <section id="results" class="results"></section>
