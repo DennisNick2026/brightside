@@ -1,0 +1,10 @@
+{
+  "id": "ARC-324-0320",
+  "title": "Archive Services / Synchronisation Exception List",
+  "category": "ARCHIVE",
+  "date": "324.03.20",
+  "status": "PUBLIC",
+  "source": "ARCHIVAL SERVICES",
+  "summary": "Exception list generated from the failed regional synchronisation.",
+  "body": "The following records were isolated during the 324.03.19 audit.\n\nARC-324-0320-01  SOURCE HEADER MISSING\nARC-324-0320-02  ORIGIN NODE UNKNOWN\nARC-324-0320-03  RETENTION DATE INVALID\nARC-324-0320-04  RETENTION DATE INVALID\nARC-324-0320-05  DUPLICATE IDENTIFIER\nARC-324-0320-06  DUPLICATE IDENTIFIER\nARC-324-0320-07  SOURCE NODE NOT FOUND\nARC-324-0320-08  SOURCE NODE NOT FOUND\nARC-324-0320-09  CHECKSUM VALID / CONTENT UNREADABLE\nARC-324-0320-10  CHECKSUM VALID / CONTENT UNREADABLE\nARC-324-0320-11  MANUAL REVIEW\nARC-324-0320-12  MANUAL REVIEW\n\nAll other exceptions were resolved automatically."
+}
