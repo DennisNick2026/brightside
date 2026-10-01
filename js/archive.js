@@ -20,7 +20,7 @@ async function lookup(){
     const r=await response.json();
 
     box.innerHTML='<a class="result" href="./record.html?id='+encodeURIComponent(r.id)+'">'+
-      '<span class="status">'+escapeHtml(status)+'</span>'+
+      '<span class="status">'+escapeHtml(String(r.status||'PUBLIC').toUpperCase())+'</span>'+
       '<h3>'+escapeHtml(r.title)+'</h3>'+
       '<div class="meta">'+escapeHtml(r.id)+' / '+escapeHtml(r.date)+' / '+escapeHtml(r.category)+'</div>'+
       '<p class="summary">'+escapeHtml(r.summary)+'</p></a>';
