@@ -145,12 +145,14 @@ function renderRecord(box,r,unlocked){
 
   const related=(r.related||[]).map(x=>{
     const id=typeof x==='string'?x:x?.id;
-    if(!id)return '';
-    return '<li><a class="related-link" href="./record.html?id='+encodeURIComponent(id)+'">'+
-      '<strong>'+escapeHtml(x?.title||id)+'</strong>'+
-      '<span class="related-meta">'+escapeHtml(x?.category||'RECORD')+' / '+escapeHtml(id)+'</span>'+
-    '</a></li>';
-  }).join('');
+    if(!id)return null;
+    return {id,title:x?.title||id,status:x?.status||'UNKNOWN',date:x?.date||'',category:x?.category||'RECORD'};
+  }).filter(Boolean).sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(x=>
+    '<li><a class="related-link" href="./record.html?id='+encodeURIComponent(x.id)+'">'+
+      '<span class="related-topline"><strong>'+escapeHtml(x.title)+'</strong><span class="related-status">'+escapeHtml(String(x.status).toUpperCase())+'</span></span>'+
+      '<span class="related-meta">'+escapeHtml(x.id)+' / '+escapeHtml(x.date)+' / '+escapeHtml(x.category)+'</span>'+
+    '</a></li>'
+  ).join('');
 
   box.innerHTML='<section class="paper">'+
     '<span class="status">'+escapeHtml(r.status)+'</span>'+
