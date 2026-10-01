@@ -87,7 +87,7 @@ async function showRecord(){
   }
 }
 
-function renderRecord(box,r,unlocked){
+async function renderRecord(box,r,unlocked){
   const status=String(r.status||'PUBLIC').toUpperCase();
 
   if(status==='WITHDRAWN'){
@@ -143,13 +143,27 @@ function renderRecord(box,r,unlocked){
     ? '<div class="access-box"><h2>ARCHIVE COPY INCOMPLETE</h2><p>The indexed copy is damaged or incomplete. The material below may not represent the complete original record.</p></div>'
     : '';
 
-  const related=(r.related||[]).map(x=>{
+  const relatedRecords=await Promise.all((r.related||[]).map(async x=>{
     const id=typeof x==='string'?x:x?.id;
     if(!id)return null;
-    return {id,title:x?.title||id,status:x?.status||'UNKNOWN',date:x?.date||'',category:x?.category||'RECORD'};
-  }).filter(Boolean).sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(x=>
+    try{
+      const response=await fetch('./records/'+encodeURIComponent(id)+'.json?ts='+Date.now(),{cache:'no-store'});
+      if(!response.ok)return {id,title:id,status:'UNAVAILABLE',date:'',category:'RECORD'};
+      const record=await response.json();
+      return {
+        id:record.id||id,
+        title:record.title||id,
+        status:String(record.status||'UNKNOWN').toUpperCase(),
+        date:record.date||'',
+        category:record.category||'RECORD'
+      };
+    }catch(e){
+      return {id,title:id,status:'UNAVAILABLE',date:'',category:'RECORD'};
+    }
+  }));
+  const related=relatedRecords.filter(Boolean).sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(x=>
     '<li><a class="related-link" href="./record.html?id='+encodeURIComponent(x.id)+'">'+
-      '<span class="related-topline"><strong>'+escapeHtml(x.title)+'</strong><span class="related-status">'+escapeHtml(String(x.status).toUpperCase())+'</span></span>'+
+      '<span class="related-topline"><strong>'+escapeHtml(x.title)+'</strong><span class="related-status">'+escapeHtml(x.status)+'</span></span>'+
       '<span class="related-meta">'+escapeHtml(x.id)+' / '+escapeHtml(x.date)+' / '+escapeHtml(x.category)+'</span>'+
     '</a></li>'
   ).join('');
