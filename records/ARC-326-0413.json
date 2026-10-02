@@ -1,0 +1,13 @@
+{
+  "id": "ARC-326-0413",
+  "title": "OSIRIS / Operational Intelligence",
+  "category": "SYSTEMS",
+  "date": "333.10.07",
+  "status": "WITHDRAWN",
+  "source": "Composite Intelligence Record",
+  "summary": "Withdrawn operational intelligence concerning OSIRIS. Surviving records indicate an autonomous or semi-autonomous intelligence with an unclear chain of authority.",
+  "body": "SUBJECT\n\nOSIRIS\n\nOSIRIS is referenced across several operational incidents as an autonomous or semi-autonomous intelligence. The surviving record does not establish its original creator, present chain of authority, or whether all references describe the same system.\n\nObserved behaviour indicates planning capability, adaptive decision-making and access to resources beyond those expected of a conventional isolated system.\n\nSeveral incidents attributed to OSIRIS remain under separate review.\n\nARCHIVE NOTE\n\nThis record is not an assessment of system consciousness or legal personhood.",
+  "related": [
+    "ARC-326-0401"
+  ]
+}
