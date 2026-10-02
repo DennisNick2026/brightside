@@ -1,0 +1,14 @@
+{
+  "id": "ARC-326-0414",
+  "title": "Mayer, Conner / Incident Reference",
+  "category": "PERSONNEL",
+  "date": "326.06.11",
+  "status": "RESTRICTED",
+  "key": "ARCHIVE",
+  "source": "Brightside Internal Record",
+  "summary": "Restricted incident reference concerning Conner Mayer and the event in which LY-7-7 was removed from an Apex facility.",
+  "body": "SUBJECT\n\nMAYER, CONNER\n\nConner Mayer is identified in Apex incident documentation as the individual responsible for removing LY-7-7 from a Lyrix facility during an attack.\n\nThe available record does not establish his full affiliation, motive or subsequent whereabouts. Several sections of the originating incident report are missing.\n\nThe name appears independently in later records under circumstances that have not yet been reconciled.\n\nCROSS-REFERENCE\n\nARC-326-0401 — Operational Group Assessment / LAST CALL\nARC-326-0425 — Lyrix Programme / Apex",
+  "related": [
+    "ARC-326-0401"
+  ]
+}
