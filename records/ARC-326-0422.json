@@ -1,11 +1,14 @@
 {
   "id": "ARC-326-0422",
-  "title": "Novacliss / Corporate Reference",
-  "category": "ORGANISATION",
+  "title": "Novacliss / Lexxir Researcher Profile",
+  "category": "PERSONNEL",
   "date": "332.09.12",
-  "status": "RESTRICTED",
-  "key": "ARCHIVE",
+  "status": "CORRUPTED",
   "source": "Brightside Internal Record",
-  "summary": "Restricted reference concerning Novacliss. Available records suggest a commercial or industrial entity with interests extending beyond a single colony.",
-  "body": "SUBJECT\n\nNOVACLISS\n\nNovacliss appears in commercial records spanning industrial procurement, infrastructure and private technical services.\n\nThe archive cannot currently distinguish between a single corporate entity, a corporate group or a trade name used by multiple related operations.\n\nReferences are sufficiently frequent to retain the designation despite incomplete corporate provenance.\n\nARCHIVE STATUS\n\nRestricted. Corporate identity under review."
+  "summary": "Corrupted personnel record concerning Novacliss, a researcher within the Lexxir division directed by Hephaestus Rigel.",
+  "body": "SUBJECT\n\nNOVACLISS\n\nARCHIVE COPY STATUS: CORRUPTED\n\nNovacliss is identified in surviving Lexxir documentation as a researcher working within the division directed by Hephaestus Rigel.\n\nThe surviving material indicates that Novacliss was a subordinate researcher rather than the head of an independent organisation or commercial entity.\n\nThe exact research assignment is not recoverable from the surviving copy. References connect the researcher to Lexxir's legacy artificial-life work and to the division responsible for Zephyr's model line.\n\nSeveral personnel and project fields are missing or corrupted.\n\nARCHIVE NOTE\n\nDo not use this copy to infer Novacliss's present position, authority or independent affiliation.\n\nCROSS-REFERENCE\n\nARC-326-0421 — Rigel, Hephaestus / Lexxir Division Director\nARC-326-0424 — Lexxir Guild / Legacy Artificial Life Division",
+  "related": [
+    "ARC-326-0421",
+    "ARC-326-0424"
+  ]
 }
