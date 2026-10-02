@@ -1,10 +1,15 @@
 {
   "id": "ARC-326-0421",
-  "title": "Rigel, Hephaestus / Industrial Record",
+  "title": "Rigel, Hephaestus / Lexxir Division Director",
   "category": "PERSONNEL",
   "date": "331.05.09",
   "status": "WITHDRAWN",
   "source": "Composite Intelligence Record",
-  "summary": "Withdrawn industrial record concerning Hephaestus Rigel. The surviving material is primarily concerned with manufacturing, procurement and disputed technical assets.",
-  "body": "SUBJECT\n\nRIGEL, HEPHAESTUS\n\nHephaestus Rigel appears in industrial and procurement records concerning specialised manufacturing and technical assets.\n\nThe surviving material indicates access to facilities and suppliers not normally available to independent operators. The exact relationship between Rigel and those facilities is unclear.\n\nSeveral associated technical records have been withdrawn separately.\n\nARCHIVE STATUS\n\nRecord withdrawn pending reconciliation of industrial ownership records."
+  "summary": "Withdrawn personnel record concerning Hephaestus Rigel, director of the Lexxir division responsible for Zephyr's model line.",
+  "body": "SUBJECT\n\nRIGEL, HEPHAESTUS\n\nHephaestus Rigel is identified in surviving Lexxir documentation as the director of the division responsible for the legacy artificial-life programme associated with Zephyr's model line.\n\nThe division's full remit remains unclear. Its records concern the creation, modification and maintenance of legacy artificial individuals.\n\nRigel's position places him directly within the organisational history relevant to Zephyr. The extent of his personal involvement in Zephyr's creation or subsequent development has not been established.\n\nNOVACLISS\n\nNovacliss is identified as a subordinate researcher within Rigel's division. Surviving references indicate that Novacliss worked under Rigel's direction on research associated with the division.\n\nARCHIVE STATUS\n\nThis record has been withdrawn pending further review of Lexxir personnel and programme documentation.\n\nCROSS-REFERENCE\n\nARC-326-0401 — Operational Group Assessment / LAST CALL\nARC-326-0422 — Novacliss / Researcher Profile\nARC-326-0424 — Lexxir Guild / Legacy Artificial Life Division",
+  "related": [
+    "ARC-326-0401",
+    "ARC-326-0422",
+    "ARC-326-0424"
+  ]
 }
