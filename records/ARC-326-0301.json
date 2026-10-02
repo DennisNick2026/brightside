@@ -1,0 +1,14 @@
+{
+  "id": "ARC-326-0301",
+  "title": "Transit Safety Bulletin / Echo Anchor Irregularities",
+  "category": "TECHNICAL",
+  "date": "329.06.18",
+  "status": "PUBLIC",
+  "index": true,
+  "source": "Civil Transit Safety Office",
+  "summary": "Public technical notice concerning a series of irregularities recorded near Echo transit infrastructure.",
+  "body": "NOTICE\n\nA number of civilian transit operators have reported navigational discrepancies near installations identified in older technical documentation as Echo Anchors.\n\nNo loss of life has been attributed to the discrepancies covered by this notice. Operators are advised to report unexpected transit delay, positional drift or incomplete route confirmation through standard safety channels.\n\nThe term \"Echo Anchor\" is retained here because it appears in historical maintenance records. The Civil Transit Safety Office makes no determination regarding the underlying technology.\n\nARCHIVE NOTE\n\nSee restricted technical record ARC-326-0411 for related archival material.",
+  "related": [
+    "ARC-326-0411"
+  ]
+}
