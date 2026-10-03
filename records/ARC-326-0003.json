@@ -2,11 +2,11 @@
   "id": "ARC-326-0003",
   "title": "Archive Orientation / Restricted Record Example",
   "category": "ARCHIVE",
-  "date": "326.01.05",
+  "date": "2026.07.18",
   "status": "RESTRICTED",
   "source": "BRIGHTSIDE ARCHIVAL NETWORK",
   "summary": "Demonstration record used to explain restricted archive access.",
-  "key": "Not-In-Play",
+  "key": "ARCHIVE",
   "body": "RESTRICTED RECORD EXAMPLE\n\nThis record is part of the archive orientation exercise.\n\nAccess requires an archive key. In normal archive material, the key should be discovered from records or information leading to the restricted document.\n\nFor this orientation example, the access key is ARCHIVE.",
   "related": [
     "ARC-326-0002"
